@@ -2,38 +2,35 @@ package Mine;
 import java.util.*;
 import java.util.Scanner;
 public class Replit {
+    // MY CODE:
+
+
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        int[] nums = {input.nextInt(), input.nextInt(),input.nextInt(),input.nextInt(),input.nextInt(),input.nextInt(),input.nextInt()};
-        // MY CODE:
+        Scanner scan = new Scanner(System.in);
+        int num = scan.nextInt();
+        fib(num);
+    }
 
+    public static void fib(int num) {
+        int num1 = 0;
+        int num2 = 1;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        for (int i = 0; i < num; i++) {
+          int temp = num1;
+          num1 = num2;
+          num2 = temp + num2;
+        }
+        System.out.println(num1);
+    }
 }
 
-}
+
+
+
+
+
+
+
 
 
 
