@@ -6,7 +6,5 @@ public class PrintNumbers {
         System.out.println(125);
         System.out.println("185 but it will be treated as a characters");
         System.out.println(5.3);
-
-
     }
 }

@@ -6,5 +6,7 @@ public class StaticBlockTest {
         StaticBlockDemo st2 = new StaticBlockDemo(); //"constructor method constructor method"   after we add constructor it will shows nums how many times we created new method
         StaticBlockDemo st3 = new StaticBlockDemo(); //"constructor method" 3 times <- constructor
         System.out.println(StaticBlockDemo.num); //25 1(10)+2(10)+3(5)=25
+        StaticBlockDemo st4 = new StaticBlockDemo(50);
+        System.out.println(StaticBlockDemo.num); //75
     }
 }

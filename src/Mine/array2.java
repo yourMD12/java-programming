@@ -23,12 +23,10 @@ public class array2 {
         System.out.println();
         String[] names = {"Mike", "Joe", "Ana", "Ali", "Joanna"};
         int[] score = {80, 54, 100, 66, 94};
-        char[] grade =new char[5];
+        char[] grade =new char[names.length];
         for(int i =0; i<100; i++) {
             if (score[i] >= 85) {
                 grade[0] = 'A';
-            } else if (score[i] > 75 && score[0] < 84) {
-                grade[0] = 'B';
             } else if (score[i] > 75 && score[0] < 84) {
                 grade[0] = 'B';
             } else if (score[i] > 65 && score[0] < 74) {
@@ -37,8 +35,6 @@ public class array2 {
                 grade[0] = 'D';
             }
         }
-
-
 
 
         //Gradebook ( Similar to MaxMinPricefrom class)
@@ -63,8 +59,38 @@ public class array2 {
         }
 //4
         System.out.println();
+        //longest palindrome
+        String[] words = {"java", "longer word", "civic" ,"apple", "racecar", "mom", "anna"};
+        String longest = "";
+        for(String word : words){
+            boolean isPalindrome = true;
+            for(int i =0; i< word.length()/2; i++){
+                if(word.charAt(i) != word.charAt(word.length()-1-i)){
+                    isPalindrome = false;
+                    break;
+                }
+            }
+            if(isPalindrome && word.length() > longest.length()){
+                longest = word;
+            }
+        }
+        System.out.println(longest.isEmpty() ? "no palindrome" : longest);
 
-
+//5         second biggest number
+        System.out.println();
+        //Input: [4,3,1,4,5,2,4,8,4,8]  Output:5
+        int[] nums2 = {4,3,1,4,5,2,4,8,4,8};
+        int max = nums2[0];
+        int second = nums2[0];
+        for(int each : nums2){
+            if(each > max){
+                max = each;
+            }
+            if(each > second && each < max){
+                second = each;
+            }
+        }
+        System.out.println(second);
 
 
 
